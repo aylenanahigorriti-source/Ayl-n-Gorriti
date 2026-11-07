@@ -1,0 +1,85 @@
+/* Portfolio — Aylén Anahí Gorriti
+   Paleta: #C51F5D (acento) · #243447 (azul) · #141D26 (oscuro) · #E2E2D2 (beige) */
+body{margin:0;background:#E2E2D2;overflow-x:clip}
+a{text-decoration:none}
+
+.page{width:100%;background:#E2E2D2;color:#141D26;font-family:Inter,sans-serif}
+
+/* Botón */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;font:700 18px "Space Grotesk",sans-serif;color:#E2E2D2;background:#C51F5D;border-radius:999px;transition:transform .25s ease,box-shadow .25s ease}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(197,31,93,.35)}
+
+/* Header */
+.nav{position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding:20px clamp(20px,5vw,72px);background:#E2E2D2;border-bottom:1px solid rgba(20,29,38,.15)}
+.logo{font:700 20px "Space Grotesk",sans-serif;color:#141D26}
+.logo span{color:#C51F5D}
+.nav nav{display:flex;gap:32px}
+.nav a.l{color:#141D26;font:500 16px Inter,sans-serif;padding:8px 2px;border-bottom:2px solid transparent;transition:border-color .25s}
+.nav a.l:hover{border-color:#C51F5D}
+
+/* Animación */
+.fade{animation:fadeUp .8s ease both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.btn,.chip{transition:none}}
+
+/* Hero */
+.hero{scroll-margin-top:90px;display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:96px clamp(20px,5vw,72px)}
+.hero-text{flex:1 1 440px;min-width:0}
+.eyebrow{margin:0 0 20px;font:600 14px Inter,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:rgba(20,29,38,.75)}
+.hero h1{margin:0;font:700 clamp(44px,6vw,84px)/1.02 "Space Grotesk",sans-serif;letter-spacing:-.02em}
+.hero h1 span{color:#C51F5D}
+.hero h2{margin:28px 0 0;font:500 clamp(20px,2vw,26px)/1.35 "Space Grotesk",sans-serif}
+.hero-quote{margin:24px 0 40px;max-width:540px;padding-left:20px;border-left:3px solid #C51F5D;font:400 18px/1.65 Inter,sans-serif;color:rgba(20,29,38,.85)}
+.hero-photo{flex:1 1 380px;display:flex;justify-content:center;animation-delay:.15s}
+.frame{position:relative;width:min(100%,460px);aspect-ratio:4/5}
+.frame .block{position:absolute;inset:28px -28px -28px 28px;background:#C51F5D;border-radius:200px 200px 24px 24px}
+.frame .dot{position:absolute;top:-24px;left:-24px;width:120px;height:120px;border-radius:50%;background:#243447}
+.frame img{position:relative;display:block;width:100%;height:100%;object-fit:cover;object-position:56% 15%;border-radius:200px 200px 24px 24px}
+
+/* Capacidades */
+.skills{scroll-margin-top:90px;padding:48px clamp(20px,5vw,72px) 96px}
+.skills h2{margin:0 0 48px;font:700 clamp(32px,4vw,52px) "Space Grotesk",sans-serif}
+.skills h2 span{color:#C51F5D}
+.cards{display:flex;flex-wrap:wrap;gap:24px}
+.card{background:#243447;color:#E2E2D2;border-radius:24px;padding:36px}
+.card-adobe{flex:1 1 420px}
+.card-web{flex:1 1 320px}
+.card h3{margin:0 0 8px;font:700 28px "Space Grotesk",sans-serif}
+.card p{margin:0 0 24px;color:rgba(226,226,210,.85);line-height:1.6}
+.chips-adobe{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.chips-web{display:grid;gap:12px}
+.chip{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#141D26;border-radius:12px;color:#E2E2D2;font:500 16px Inter,sans-serif;transition:transform .25s}
+.chip:hover{transform:translateX(4px)}
+.chip b{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;border:1.5px solid #C51F5D;font:700 14px "Space Grotesk",sans-serif;color:#E2E2D2}
+
+/* Contacto */
+.contact{scroll-margin-top:90px;margin:0 clamp(20px,5vw,72px) 96px;background:#243447;color:#E2E2D2;border-radius:32px;padding:clamp(32px,6vw,80px);position:relative;overflow:hidden}
+.contact .circle{position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:#C51F5D}
+.contact-inner{position:relative;max-width:620px}
+.contact h2{margin:0 0 20px;font:700 clamp(36px,5vw,64px)/1.05 "Space Grotesk",sans-serif}
+.contact h2 span{border-bottom:4px solid #C51F5D}
+.contact-text{margin:0 0 32px;font-size:18px;line-height:1.65;color:rgba(226,226,210,.85)}
+.contact-mail{display:inline-block;margin-bottom:28px;font:600 clamp(18px,2.4vw,26px) "Space Grotesk",sans-serif;color:#E2E2D2;border-bottom:2px solid #C51F5D}
+.contact-phone{margin:16px 0 0;font-size:14px;color:rgba(226,226,210,.8)}
+
+/* Trabajos */
+.works-head{scroll-margin-top:90px;padding:80px clamp(20px,5vw,72px) 64px}
+.works-head .eyebrow{margin-bottom:16px}
+.works-head h1{margin:0;font:700 clamp(48px,7vw,104px)/1 "Space Grotesk",sans-serif;letter-spacing:-.02em}
+.works-head h1 span{color:#C51F5D}
+.project{display:flex;flex-wrap:wrap;flex-direction:row;gap:40px;align-items:stretch;padding:0 clamp(20px,5vw,72px) 96px}
+.project.reverse{flex-direction:row-reverse}
+.project-img{flex:1.6 1 480px;min-width:0}
+.project-img img{display:block;width:100%;height:auto;border-radius:30px}
+.project-info{flex:1 1 300px;display:flex;flex-direction:column;justify-content:center}
+.tag{align-self:flex-start;padding:6px 14px;border:1.5px solid #C51F5D;border-radius:999px;font:600 13px Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.project-info h2{margin:20px 0 16px;font:700 clamp(28px,3vw,40px)/1.1 "Space Grotesk",sans-serif}
+.project-info p{margin:0;font-size:17px;line-height:1.65;color:rgba(20,29,38,.85)}
+
+/* Footer */
+.footer{background:#141D26;color:#E2E2D2;padding:64px clamp(20px,5vw,72px);display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between}
+.footer-name{font:700 24px "Space Grotesk",sans-serif}
+.footer-role{margin:8px 0 0;color:rgba(226,226,210,.8)}
+.footer-contact{display:flex;flex-direction:column;gap:8px}
+.footer-social{display:flex;gap:24px;align-items:flex-start}
+.footer a{color:#E2E2D2}
